@@ -2,20 +2,19 @@
 
 int[] House = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+House[0] = 1;
 House[1] = 1;
 House[2] = 1;
 House[3] = 1;
 House[4] = 1;
 House[5] = 1;
-House[5] = 1;
 House[6] = 1;
 House[7] = 1;
 House[8] = 1;
 House[9] = 1;
-House[10] = 1;
 
 int HouseL = House[1] + House[3] + House[5] + House[7] + House[9];
-int HouseR = House[2] + House[4] + House[6] + House[8] + House[10];
+int HouseR = House[0] + House[2] + House[4] + House[6] + House[8];
 
 if (HouseL > HouseR)
 {
@@ -25,7 +24,7 @@ else if (HouseR > HouseL)
 {
     Console.WriteLine($"Четных Больше = {HouseR}");
 }
-else HouseL = HouseR;
+else
 {
     Console.WriteLine($"Жителей по ровну по обе стороны");
 }
